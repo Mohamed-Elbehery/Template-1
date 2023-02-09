@@ -253,7 +253,9 @@
     <!-- Footer Section -->
     <footer>
       <div class="left-side">
-        <div class="logo"><img src="./assets/main-logo.png" alt="logo" /></div>
+        <div class="logo">
+          <a href="#"><img src="./assets/main-logo.png" alt="logo" /></a>
+        </div>
         <div class="left-content">
           <p>
             Concord Royal Court (3rd floor)<br />Dhanmondi, Dhaka 1209,
@@ -280,15 +282,8 @@
       </div>
       <div class="clear"></div>
     </footer>
+    <!-- JavaScript Code -->
     <script>
-      // Stopping the Refresh on Clicking
-      const anchorLinks = document.querySelectorAll("a");
-      anchorLinks.forEach((a) => {
-        a.onclick = (e) => {
-          e.preventDefault();
-        };
-      });
-
       // Adding the Active Class to the Targeted li
       const lis = document.querySelectorAll("header ul li");
       lis.forEach((li) => {

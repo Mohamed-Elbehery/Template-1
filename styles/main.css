@@ -193,13 +193,21 @@ header nav ul li a.btn:hover {
 }
 
 .services .services-cards .services-card {
+  float: left;
   width: 350px;
   min-height: 225px;
   padding: 1rem;
-  float: left;
   margin: 1.5rem 0 1.5rem 2.5%;
+  transition: var(--transition-duration);
   background-color: white;
   border-radius: 10px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.services .services-cards .services-card:hover {
+  box-shadow: 0 0 37px -26px black;
+  border-color: rgba(211, 211, 211, 0.6);
 }
 
 .services .services-cards .services-card .card-img {
