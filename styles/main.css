@@ -429,10 +429,7 @@ footer .left-side,
   float: left;
 }
 
-footer .middle-side {
-  margin-left: 15rem;
-}
-
+footer .middle-side,
 footer .right-side {
   margin-left: 15rem;
 }
@@ -459,5 +456,10 @@ footer ul li:last-child {
 @media screen and (min-width: 1920px) {
   .services .services-cards .services-card {
     width: 500px;
+  }
+
+  footer .middle-side,
+  footer .right-side {
+    margin-left: 27.5rem;
   }
 }
