@@ -1,0 +1,455 @@
+/*! Variables */
+:root {
+  --primary-color: #717cff;
+  --secondary-color: #5462fa;
+  --transition-duration: 0.5s;
+  --section-padding: 5%;
+  --section-background: rgba(211, 211, 211, 0.2);
+}
+
+/*! Global Rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: var(--section-padding);
+}
+
+.main-heading {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.main-heading h2 {
+  font-size: 1.5rem;
+}
+
+.main-heading p {
+  color: gray;
+  margin-top: 1rem;
+  font-size: 0.925rem;
+  line-height: 1.7;
+}
+
+.more-btn {
+  color: var(--primary-color);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding-top: 0.5rem;
+  transition: var(--transition-duration);
+}
+
+.more-btn:hover {
+  color: var(--secondary-color);
+  transform: translateX(10px);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: var(--transition-duration);
+}
+
+nav {
+  float: right;
+}
+
+header ul li {
+  list-style: none;
+  float: left;
+  cursor: pointer;
+}
+
+.clear {
+  clear: both;
+}
+
+/*! Main Styles */
+/* Start Header Styles */
+header {
+  padding: 1rem var(--section-padding);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  backdrop-filter: blur(1rem);
+}
+
+header .logo {
+  float: left;
+}
+
+header nav ul li {
+  margin: 1rem 0 0 6rem;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+header nav ul li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: var(--transition-duration);
+}
+
+header nav ul li:hover::after {
+  width: 100%;
+}
+
+header nav ul li.active::after {
+  width: 40%;
+  transition: var(--transition-duration);
+}
+
+header nav ul li.active:hover::after {
+  width: 100%;
+}
+
+header nav ul li.btn:hover::after {
+  width: 0;
+}
+
+header nav ul li a.btn,
+a.btn {
+  color: gray;
+  border: 2px solid var(--primary-color);
+  padding: 0.75rem 2rem;
+  border-radius: 0.75rem;
+  transition: var(--transition-duration);
+}
+
+header nav ul li a.btn:hover {
+  color: white;
+  background-color: var(--primary-color);
+}
+/* End Header Styles */
+/* Start Landing Styles */
+.landing {
+  padding: calc(var(--section-padding) + 4rem) var(--section-padding);
+}
+
+.landing .landing-content {
+  float: left;
+  margin-top: 5rem;
+}
+
+.landing .landing-img {
+  float: right;
+}
+
+.landing .landing-content h1 {
+  font-size: 2.5rem;
+  line-height: 1.7;
+}
+
+.landing .landing-content h1 span {
+  color: var(--primary-color);
+}
+
+.landing .landing-content p {
+  color: gray;
+  line-height: 1.4;
+}
+
+.landing .landing-content a.btn {
+  color: white;
+  background-color: var(--primary-color);
+  margin-top: 1.5rem;
+  display: inline-block;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  transition: var(--transition-duration);
+}
+
+.landing .landing-content a.btn:hover {
+  background-color: var(--secondary-color);
+}
+
+.landing .landing-img img {
+  width: 520px;
+}
+/* End Landing Styles */
+/* Start Services Styles */
+.services {
+  background-color: var(--section-background);
+}
+
+.services .services-cards {
+  margin-top: 4rem;
+  border-radius: 10px;
+}
+
+.services .services-cards .services-card {
+  width: 350px;
+  min-height: 225px;
+  padding: 1rem;
+  float: left;
+  margin: 1.5rem 0 1.5rem 2.5%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.services .services-cards .services-card .card-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 0.625rem;
+}
+
+.services .services-cards .services-card .card-img img {
+  border-radius: 50%;
+  width: 100%;
+}
+
+.services .services-cards .services-card .card-info h3 {
+  margin-bottom: 0.625rem;
+}
+
+.services .services-cards .services-card .card-info p {
+  color: gray;
+  line-height: 1.5;
+}
+
+.services .services-cards .services-card .card-info button {
+  margin-top: 0.625rem;
+}
+
+.services .services-cards .services-card.fourth-card {
+  margin-left: 22.5%;
+}
+/* End Services Styles */
+/* Start News Styles */
+.news {
+  background-color: var(--section-background);
+  padding-top: 0;
+}
+
+.news .news-cards {
+  margin-top: 3rem;
+}
+
+.news .news-cards .news-card {
+  float: left;
+  margin-left: 3rem;
+  margin-top: 2rem;
+  background-color: white;
+  padding-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 40px -20px black;
+  cursor: pointer;
+  transition: var(--transition-duration);
+}
+
+.news .news-cards .news-card:hover {
+  transform: translateY(-10px);
+}
+
+.news .news-cards .news-card .card-info {
+  margin-left: 1rem;
+}
+
+.news .news-cards .news-card .card-info p {
+  color: gray;
+  font-size: 0.75rem;
+  margin: 1rem 0;
+}
+/* End News Styles */
+/* Start Countries Styles */
+.countries {
+  background-color: var(--section-background);
+  padding: var(--section-padding);
+  padding-bottom: 2rem;
+  padding-top: 0;
+}
+
+.countries .btn {
+  color: white;
+  background-color: var(--primary-color);
+  text-align: center;
+  transition: var(--transition-duration);
+  margin-left: 45%;
+}
+
+.countries .btn:hover {
+  background-color: var(--secondary-color);
+}
+
+.countries .main-heading {
+  margin-top: 6rem;
+}
+
+.countries .countries-cards {
+  margin-top: 3rem;
+  background-color: var(--section-padding);
+}
+
+.countries .countries-cards .countries-card {
+  float: left;
+  background-color: transparent;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  padding-bottom: 2.5rem;
+  border-radius: 2.8rem;
+  cursor: pointer;
+  transition: var(--transition-duration);
+  border: 3px solid transparent;
+}
+
+.countries .countries-cards .countries-card:hover {
+  box-shadow: 0 0 75px -45px black;
+  transform: translateY(-10px);
+  border-color: white;
+}
+
+.countries .countries-cards .countries-card .card-img {
+  transition: var(--transition-duration);
+  position: relative;
+}
+
+.countries .countries-cards .countries-card .card-img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  bottom: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  transition: var(--transition-duration);
+}
+
+.countries .countries-cards .countries-card:hover .card-img {
+  transform: translateY(-5px);
+}
+
+.countries .countries-cards .countries-card:hover .card-img::before {
+  background-color: transparent;
+}
+
+.countries .countries-cards .countries-card .card-info {
+  margin-left: 1rem;
+}
+
+.countries .countries-cards .countries-card .card-info h4 {
+  margin: 0.75rem 0;
+}
+
+.countries .countries-cards .countries-card .card-info p {
+  color: gray;
+
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+/* End Countries Styles */
+/* Start Dots and Apply Styles */
+.dots {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: inline-block;
+  cursor: pointer;
+  transition: var(--transition-duration);
+  border: 2px solid var(--primary-color);
+}
+
+.dot:hover {
+  background-color: var(--primary-color);
+}
+
+.dot.active {
+  background-color: var(--primary-color);
+}
+
+.apply {
+  padding: 0.85rem var(--section-padding);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.apply h3 {
+  float: left;
+  margin-top: 1rem;
+}
+
+.apply .btn {
+  float: right;
+  background-color: var(--primary-color);
+  color: white;
+  transition: var(--transition-duration);
+}
+
+.apply .btn:hover {
+  background-color: var(--secondary-color);
+}
+/* End Dots and Apply Styles */
+/* Start Footer Styles */
+footer {
+  background-color: var(--primary-color);
+  padding: calc(var(--section-padding) / 2) var(--section-padding);
+}
+
+footer p {
+  color: white;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-top: 1rem;
+}
+
+footer p:last-child {
+  margin-top: 3rem;
+}
+
+footer .left-side,
+.middle-side,
+.right-side {
+  float: left;
+}
+
+footer .middle-side {
+  margin-left: 15rem;
+}
+
+footer .right-side {
+  margin-left: 15rem;
+}
+
+footer ul li {
+  list-style: none;
+  padding: 1rem 0;
+  color: white;
+  cursor: pointer;
+  transition: var(--transition-duration);
+}
+
+footer ul li:hover {
+  transform: translateX(10px);
+}
+
+footer ul li:last-child {
+  padding-top: 1rem;
+}
+/* End Footer Styles */
+
+/*TODO Media Queries */
+/** 1920px (Large Screens) */
+@media screen and (min-width: 1920px) {
+  .services .services-cards .services-card {
+    width: 500px;
+  }
+}
