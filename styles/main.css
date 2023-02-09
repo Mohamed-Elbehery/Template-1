@@ -139,6 +139,7 @@ header nav ul li a.btn:hover {
 /* Start Landing Styles */
 .landing {
   padding: calc(var(--section-padding) + 4rem) var(--section-padding);
+  background-color: var(--section-background);
 }
 
 .landing .landing-content {
@@ -374,7 +375,7 @@ header nav ul li a.btn:hover {
   display: inline-block;
   cursor: pointer;
   transition: var(--transition-duration);
-  border: 2px solid var(--primary-color);
+  border: 1px solid var(--primary-color);
 }
 
 .dot:hover {
