@@ -611,7 +611,7 @@
       const lis = document.querySelectorAll("header ul li");
       lis.forEach((li) => {
         li.addEventListener("click", (e) => {
-          if (e.target.classList[0] === "btn") {
+          if (e.target.classList[0] === "btn" || e.target.id === "theme") {
             return;
           }
           lis.forEach((li) => {
