@@ -22,7 +22,7 @@
           <li>Our Services</li>
           <li>Responsibilities</li>
           <li>Country</li>
-          <li id="theme">Change Theme</li>
+          <li id="theme">Dark Mode</li>
           <li class="btn"><a class="btn" href="#apply">Apply</a></li>
         </ul>
       </nav>
@@ -462,7 +462,7 @@
             <img src="./assets/Copy 4.png" alt="water-img" />
           </div>
           <div class="card-info">
-            <h4>Come On In. The Water's Fine</h4>
+            <h4>Egypt</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing <br />elit
               Distinctio, quos? Mollitia lola architecto neque
@@ -474,7 +474,7 @@
             <img src="./assets/Rectangle 4.png" alt="water-img" />
           </div>
           <div class="card-info">
-            <h4>Come On In. The Water's Fine</h4>
+            <h4>UAE</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing <br />elit
               Distinctio, quos? Mollitia lola architecto neque
@@ -486,7 +486,7 @@
             <img src="./assets/Copy 4.png" alt="water-img" />
           </div>
           <div class="card-info">
-            <h4>Come On In. The Water's Fine</h4>
+            <h4>Egypt</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing <br />elit
               Distinctio, quos? Mollitia lola architecto neque
@@ -498,7 +498,7 @@
             <img src="./assets/Rectangle Copy 4.png" alt="water-img" />
           </div>
           <div class="card-info">
-            <h4>Come On In. The Water's Fine</h4>
+            <h4>Egypt</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing <br />elit
               Distinctio, quos? Mollitia lola architecto neque
@@ -553,92 +553,6 @@
       <div class="clear"></div>
     </footer>
     <!-- JavaScript Code -->
-    <script>
-      // Creating the Default theme
-      const changeTheme = () => {
-        if (localStorage.theme) {
-          if (localStorage.getItem("theme") === "dark") {
-            document.body.style =
-              "background-color: black; color: white; transition: 0.3s;";
-          } else {
-            document.body.style =
-              "background-color: transparent; color: black; transition: 0.3s;";
-            localStorage.setItem("theme", "light");
-          }
-        }
-      };
-
-      // services cards
-      const servicesCards = document.querySelectorAll(
-        ".services .services-cards .services-card"
-      );
-
-      const applyThemeChanges = () => {
-        servicesCards.forEach((card) => {
-          if (localStorage.theme === "dark") {
-            card.style = "background-color: #717cff;";
-            card.children[1].children[1].style.color = "white";
-            card.children[1].children[2].style.color = "#c0c0c0";
-          } else {
-            card.style = "background-color: white;";
-            card.children[1].children[1].style.color = "gray";
-            card.children[1].children[2].style.color = "#717cff";
-          }
-        });
-      };
-      // news cards
-      const newsCards = document.querySelectorAll(
-        ".news .news-cards .news-card"
-      );
-
-      const applyThemeChangesNews = () => {
-        newsCards.forEach((card) => {
-          if (localStorage.theme === "dark") {
-            card.style = "background-color: #717cff;";
-            card.children[1].children[0].style.backgroundColor = "white";
-            card.children[1].children[1].style.color = "#d3d3d3";
-            card.children[1].children[2].style.color = "white";
-          } else {
-            card.style.backgroundColor = "white";
-            card.children[1].children[0].style.backgroundColor = "transparent";
-            card.children[1].children[1].style.color = "gray";
-            card.children[1].children[2].style.color = "black";
-          }
-        });
-      };
-
-      // Adding the Active Class to the Targeted li
-      const lis = document.querySelectorAll("header ul li");
-      lis.forEach((li) => {
-        li.addEventListener("click", (e) => {
-          if (e.target.classList[0] === "btn" || e.target.id === "theme") {
-            return;
-          }
-          lis.forEach((li) => {
-            li.classList.remove("active");
-          });
-          e.target.classList.add("active");
-        });
-      });
-
-      // Creating the Theme in Local Storage and Applying the Changes
-      const theme = document.querySelector("#theme");
-      theme.addEventListener("click", () => {
-        if (localStorage.theme === "light") {
-          localStorage.setItem("theme", "dark");
-        } else {
-          localStorage.setItem("theme", "light");
-        }
-        // Calling the functions to apply the changes after clicking directly
-        changeTheme();
-        applyThemeChanges();
-        applyThemeChangesNews();
-      });
-
-      // Displaying the Theme from local storage
-      changeTheme();
-      applyThemeChanges();
-      applyThemeChangesNews();
-    </script>
+    <script src="./src/app.js"></script>
   </body>
 </html>

@@ -144,7 +144,7 @@ header nav ul li a.btn:hover {
 /* End Header Styles */
 /* Start Landing Styles */
 .landing {
-  padding: calc(var(--section-padding) + 4rem) var(--section-padding);
+  padding: 12% 5%;
   background-color: var(--section-background);
 }
 
@@ -201,7 +201,7 @@ header nav ul li a.btn:hover {
 
 .services .services-cards .services-card {
   float: left;
-  width: 350px;
+  width: 28.5%;
   min-height: 260px;
   padding: 1rem;
   margin: 1.5rem 0 1.5rem 2.5%;
@@ -241,7 +241,7 @@ header nav ul li a.btn:hover {
 }
 
 .services .services-cards .services-card .card-info button {
-  margin-top: 1rem;
+  margin-top: 6.5%;
 }
 
 .services .services-cards .services-card.fourth-card {
@@ -445,7 +445,7 @@ footer .left-side,
 
 footer .middle-side,
 footer .right-side {
-  margin-left: 15rem;
+  margin-left: 22.5%;
 }
 
 footer ul li {
@@ -464,24 +464,3 @@ footer ul li:last-child {
   padding-top: 1rem;
 }
 /* End Footer Styles */
-
-/*TODO Media Queries */
-/** 1920px (Large Screens) */
-@media screen and (min-width: 1920px) {
-  header nav ul li {
-    margin-left: 6rem;
-  }
-
-  .services .services-cards .services-card {
-    width: 500px;
-  }
-
-  .services .services-cards .services-card .card-info button {
-    margin-top: 2.325rem;
-  }
-
-  footer .middle-side,
-  footer .right-side {
-    margin-left: 27.5rem;
-  }
-}
